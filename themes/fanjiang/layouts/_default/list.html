@@ -1,0 +1,17 @@
+{{ define "main" }}
+<ul class="post-list">
+  {{ range .Paginator.Pages }}
+  <li class="post-list-item">
+    <h2 class="post-list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <time class="post-list-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+    {{ if .Summary }}<p class="post-list-summary">{{ .Summary }}</p>{{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ if gt .Paginator.TotalPages 1 }}
+<nav class="pagination">
+  {{ if .Paginator.HasPrev }}<a href="{{ .Paginator.Prev.URL }}">&larr; Newer</a>{{ else }}<span></span>{{ end }}
+  {{ if .Paginator.HasNext }}<a href="{{ .Paginator.Next.URL }}">Older &rarr;</a>{{ else }}<span></span>{{ end }}
+</nav>
+{{ end }}
+{{ end }}

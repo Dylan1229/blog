@@ -1,0 +1,19 @@
+baseURL = "https://blog.fanjiang.net/"
+languageCode = "en-us"
+title = "Fanjiang's Blog"
+theme = "fanjiang"
+paginate = 10
+summaryLength = 40
+
+[params]
+  author = "Fanjiang Ye"
+  description = "Thoughts on ML systems, research, and life."
+  homeURL = "https://home.fanjiang.net"
+
+[markup]
+  [markup.highlight]
+    style = "monokailight"
+    lineNos = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

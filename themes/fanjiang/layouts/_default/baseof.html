@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "theme-toggle.html" . }}
+  <div class="site-wrapper">
+    <header class="site-header">
+      <h1 class="site-title"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+      <nav class="site-nav">
+        <a href="{{ "/" | relURL }}">Posts</a>
+        <a href="{{ .Site.Params.homeURL }}">Home</a>
+      </nav>
+    </header>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer class="site-footer">
+      <span>&copy; {{ now.Year }} {{ .Site.Params.author }}</span>
+      <a href="{{ .Site.Params.homeURL }}">home.fanjiang.net</a>
+    </footer>
+  </div>
+</body>
+</html>

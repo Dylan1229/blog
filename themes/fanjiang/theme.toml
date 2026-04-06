@@ -1,0 +1,7 @@
+name = "Fanjiang"
+license = "MIT"
+description = "A warm, serif-first blog theme matching home.fanjiang.net"
+min_version = "0.120.0"
+
+[author]
+  name = "Fanjiang Ye"
