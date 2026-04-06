@@ -138,6 +138,10 @@ h1, h2, h3 {
   font-size: var(--fs-meta);
   color: var(--ink-muted);
   margin-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .post-meta .tag {
@@ -192,11 +196,16 @@ a:hover {
 }
 .post-list-title a:hover { color: var(--accent); }
 
-.post-list-date {
+.post-list-meta {
   font-family: var(--font-mono);
   font-size: var(--fs-meta);
   color: var(--ink-faint);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
 }
+.meta-sep { color: var(--rule); }
 
 .post-list-summary {
   color: var(--ink-muted);
